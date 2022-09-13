@@ -1,10 +1,10 @@
-import RunAwayEffect from '@/components/RunAwayEffect'
-import { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import RunAwayEffect from "@/components/RunAwayEffect";
+import { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
-const Q81:NextPage = () => {
+const Q81: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,26 +14,16 @@ const Q81:NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Question 8:
-        </h1>
+        <h1 className={styles.title}>Question 8:</h1>
 
-        <p className={styles.description}>
-          The below component is a run-away effect. How would you fix it?
-        </p>
+        <p className={styles.description}>The below component is a run-away effect. How would you fix it?</p>
 
         <div className={styles.grid}>
-
-
-          <RunAwayEffect/>
-
-          
-
+          <RunAwayEffect />
         </div>
       </main>
-
     </div>
-  )
-}
+  );
+};
 
-export default Q81
+export default Q81;
