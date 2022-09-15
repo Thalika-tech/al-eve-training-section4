@@ -30,6 +30,8 @@ async function handleSignIn(email: string, password: string) {
 
 function AuthForm() {
   const [isSignin, setIssignin] = useState<boolean>(false);
+
+  //Q7.1.1 - 2/2
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -41,10 +43,11 @@ function AuthForm() {
     event.preventDefault();
 
     if (isSignin) {
-      // Question 7.1.3
+      // Question 7.1.3 5/5 You get all marks free because the question was not correct.
       handleSignIn(email, password);
+      //Question 7.1.4 - 1/1 free marks
     } else {
-      // Question 7.1.2
+      // Question 7.1.2 - 4/4
       handleSignUp(email, password);
     }
   }

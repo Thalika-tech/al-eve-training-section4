@@ -6,11 +6,14 @@ import { compareHashed } from "../../../utils/encryption";
 let credentialsProvider = Credentials({
   async authorize({ email, password }) {
     // Question 7.3
+
+    //Q7.3.1 - 3/3
     const userFound = connectToUsers.findOne(email);
     if (userFound === null) {
       return res.status(404).json({ message: "User does not exist" });
     }
 
+    //Q7.3.2 - 2/4 incorrect usage of compareHashed
     const hashPass = compareHashed(password);
 
     if (userFound.password !== hashPass) {

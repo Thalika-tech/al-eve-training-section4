@@ -5,6 +5,9 @@ import { hashPassword } from "utils/encryption";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
+    //Your response is not meant to be in here its ment to be under Question 7.2 :)
+
+    //Q7.2.1 - 2/2
     const email = req.body.email;
     const password = req.body.password;
 
@@ -17,9 +20,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(422).json({ message: "Invalid Password" });
     }
 
+    //Q7.2.2 - 3/4 you did not open a connection
     const client = await connectToUsers();
     const connenction = client?.db();
 
+
+    //Q7.2.3 & Q7.2.4 - 3/3 + 2/2
     if (connenction?.findOne(email)) {
       res.status(409).json({ message: "User already exists" });
     } else {
