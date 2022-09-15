@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-//Q8.2.4
+//Q8.2.4 - 1/1
 import { POSTS } from "./index";
 
 interface PostsProps {
@@ -9,7 +9,7 @@ interface PostsProps {
 }
 
 function FilteredPosts(props: PostsProps) {
-  //Q8.2.5
+  //Q8.2.5 - 4/4
   let filteredPosts = useMemo(() => {
     return props.posts.filter((post) => post.userId == props.userId);
   }, [props.userId]);

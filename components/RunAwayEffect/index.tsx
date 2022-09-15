@@ -2,10 +2,11 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/Home.module.css";
 
-//Question 8.1
+//Question 8.1 - 1/1
 
 function RunAwayEffect() {
   const [counter, setCounter] = useState<number>(0);
+
 
   useEffect(() => {
 

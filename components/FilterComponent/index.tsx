@@ -2,7 +2,14 @@ import React, { useCallback, useEffect, useState } from "react";
 import FilteredPosts from "./FilteredPosts";
 import UserSelector from "./UserSelector";
 
-//Q8.2.1
+//Q8.2.1 - 1/2 Silly mistake. The example what for you to see what a post looks like. it didn't show the types
+//Expected:
+// export type POSTS={
+//   userId: number,
+//   id: number,
+//   title: string,
+//   body:string
+// }
 
 export type POSTS = {
   userId: 1;

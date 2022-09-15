@@ -16,7 +16,7 @@ function UserSelector({ handleSelectUser }: UserProps) {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => {
-        //Q8.2.3
+        //Q8.2.3 - 2/2
         const filterData = data.map((user: USER) => {
           return { id: user.id, username: user.username };
         });
