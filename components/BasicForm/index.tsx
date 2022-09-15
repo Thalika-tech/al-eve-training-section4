@@ -1,24 +1,34 @@
 import styles from "@/styles/Forms.module.css";
 import { FormEvent, useState } from "react";
 
+
+//Q5.5.1 - 1/1
+//Q5.5.2 - 1/1
+
 function BasicForm() {
-  // Q5.1
-  const [username, setUsername] = useState("");
+  // Q5.1 - 2/4 try not to use the any type, you did not implement two-way binding
+  const [username, setUsername] = useState(""); 
   const [password, setPassword] = useState("");
 
+
+  //Q5.3.1 - 3/3 Awesome!
   const [usernameIsTouched, setUsernameIsTouched] = useState(false);
   const [passwordIsTouched, setPasswordIsTouched] = useState(false);
 
+  //Q5.2.2 - 7/7 Well done
   const usernameIsValid = username.trim().length >= 5;
   const passwordIsValid = password.trim().length >= 5 && /\d/.test(password);
 
+
+  // Q5.4.1 - 1/1
+  // could be simplified to let formIsValid = usernameIsValid && passwordIsValid
   let formIsValid = false;
 
   if (usernameIsValid && passwordIsValid) {
     formIsValid = true;
   }
 
-  const handleUsername = (event: any) => {
+  const handleUsername = (event: any) => { // Use ChangeEvent<HTMLInputElement>
     setUsername(event.target.value);
   };
 
@@ -35,9 +45,11 @@ function BasicForm() {
   };
 
   function submitHandler(event: FormEvent<HTMLFormElement>) {
-    // Q5.2.1
+    // Q5.2.1 
     event.preventDefault();
 
+    //Q5.2.3 - 2/3 need to return out of the function for it to do nothing. 
+    // when submit is pressed with out the return it will set your touched to true and your values will be invalid.
     if (usernameIsValid && passwordIsValid) {
       alert("User Signed In");
       setUsername("");
