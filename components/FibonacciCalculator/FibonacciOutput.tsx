@@ -1,3 +1,4 @@
+// 5/6 formula is correct but is not optimal and freezes for large numbers. but otherwise a clever solution
 const FibonacciOutput = (props: { nValue: number }) => {
     const nthValue = props.nValue;
   

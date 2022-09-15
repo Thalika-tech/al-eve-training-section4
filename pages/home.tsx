@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <div className={styles.grid}>
 
           {/* Q4.1 Add the FibonacciCalculator Component here. */}
-          <FibonacciCalculator />
+          <FibonacciCalculator /> {/*1*/}
 
         </div>
       </main>

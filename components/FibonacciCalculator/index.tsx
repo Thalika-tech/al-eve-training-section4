@@ -5,11 +5,11 @@ import FibonacciOutput from './FibonacciOutput';
 
 function FibonacciCalculator() {
 
-    // Q4.2 Here
-    const [nth, setNth] = useState(0);
+    // Q4.2 Here - 1/3 expected a useRef
+    const [nth, setNth] = useState(0); //remember to type your states. the input is a number input so you can expect integers
 
     const handleNthUpdate=()=>{
-        // Q4.3 Here
+        // Q4.3 Here - 1/2 could be simplified with useRef, The input is has type number so you do not need parseInt you also wouldn't need it if you typed you state.
         setNth(parseInt((document.getElementById("nth-value") as HTMLInputElement).value)); 
     }
 
@@ -24,10 +24,11 @@ function FibonacciCalculator() {
 
       </div>
       <div className={styles["cal-output"]}>
-        <div></div>
+        <div>
         
         {/* Q4.4 here */}
         <FibonacciOutput nValue={nth}/>
+        </div>
 
       </div>
     </div>
